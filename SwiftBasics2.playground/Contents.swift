@@ -1,6 +1,5 @@
 import UIKit
 
-<<<<<<< HEAD
 
 //Only one type array
 var favoriteMovies = [
@@ -26,6 +25,4 @@ favoriteMovies[favoriteMovies.count - 2]
 favoriteMovies.last
 favoriteMovies.first
 favoriteMovies.sort()
-=======
-var greeting = "Hello, playground"
->>>>>>> dc792f78692b7a016412563523f8f651c0817e8b
+
