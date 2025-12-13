@@ -18,11 +18,16 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
     var chosenPaint = ""
     var chosenPaintingId : UUID?
     
+    @IBOutlet weak var saveButtonOutlet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if(chosenPaint != ""){
             //CoreData
+            
+            saveButtonOutlet.titleLabel?.text = "Update"
+            saveButtonOutlet.isEnabled = false
+            
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
             
@@ -57,6 +62,8 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
         }
         else {
+            saveButtonOutlet.titleLabel?.text = "Save"
+            saveButtonOutlet.isEnabled = false
             textFieldName.text = ""
             textFieldYear.text = ""
             textFieldArtistName.text = ""
@@ -83,6 +90,7 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageViewDetail.image = info[.originalImage] as? UIImage
+        saveButtonOutlet.isEnabled = true
         self.dismiss(animated: true, completion: nil)
     }
     

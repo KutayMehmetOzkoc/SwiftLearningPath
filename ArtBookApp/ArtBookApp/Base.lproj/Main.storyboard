@@ -118,6 +118,7 @@
                     <navigationItem key="navigationItem" title="Art Detail Page" id="gc9-Y7-JYo"/>
                     <connections>
                         <outlet property="imageViewDetail" destination="Rgp-vp-rom" id="HbB-G4-NkU"/>
+                        <outlet property="saveButtonOutlet" destination="uNH-2f-scd" id="EiX-0v-Y6P"/>
                         <outlet property="textFieldArtistName" destination="Tnv-VT-vXK" id="Kzs-7O-bgS"/>
                         <outlet property="textFieldName" destination="3IH-xq-yb5" id="zJs-fh-wx4"/>
                         <outlet property="textFieldYear" destination="YIA-vb-4gK" id="W3G-d0-4wn"/>
